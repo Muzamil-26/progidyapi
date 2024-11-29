@@ -10,7 +10,7 @@ const Page2 = () => {
 
   const handleExampleClick = async () => {
     try {
-      const res = await axios.get('http://localhost:4000/api/products');
+      const res = await axios.get('https://progidyapi.onrender.com/api/products');
       if (res.status === 200) {
         console.log(res.data);
         setAllProducts(res.data.AllProducts || []); // Assume response contains a field 'AllProducts'
@@ -47,7 +47,7 @@ const Page2 = () => {
         <div className="bg-zinc-50 w-full mt-4 p-4 rounded-md overflow-x-auto">
           <pre className="overflow-x-auto">
             <code className="w-full block p-2 text-sm bg-gray-200 rounded-md">
-              fetch('https://muzamilapi.onrender.com/api/products/')
+              fetch('https://progidyapi.onrender.com/api/products')
               <br />
               .then((res) =&gt; res.json())
               <br />
