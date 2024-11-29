@@ -24,7 +24,7 @@ const Docs = () => {
     setloading(true); // Set loading state before making the request
     setError(null); // Reset error state before fetching
     try {
-      const res = await axios.get("http://localhost:4000/api/products");
+      const res = await axios.get("https://progidyapi.onrender.com/api/products");
       if (res.status === 200) {
         console.log(res.data);
         setAllProducts(res.data.AllProducts || []); // Assume response contains a field 'AllProducts'
@@ -44,7 +44,7 @@ const Docs = () => {
     setloading(true); // Set loading state before making the request
     setError(null); // Reset error state before fetching
     try {
-      const res = await axios.get("http://localhost:4000/api/products/1");
+      const res = await axios.get("https://progidyapi.onrender.com/api/products/1");
       if (res.status === 200) {
         console.log(res.data);
         setAllProducts1(res.data.AllProducts || []); // Assume response contains a field 'AllProducts'
@@ -65,7 +65,7 @@ const Docs = () => {
     setError(null); // Reset error state before fetching
     try {
       const res = await axios.get(
-        "http://localhost:4000/api/products?limit=3&sort=id"
+        "https://progidyapi.onrender.com/api/products?limit=3&sort=id"
       );
       if (res.status === 200) {
         console.log(res.data);
@@ -86,7 +86,7 @@ const Docs = () => {
     setloading(true); // Set loading state before making the request
     setError(null); // Reset error state before fetching
     try {
-      const res = await axios.get("http://localhost:4000/api/products?sort=id");
+      const res = await axios.get("https://progidyapi.onrender.com/api/products?sort=id");
       if (res.status === 200) {
         console.log(res.data);
         setAllProducts3(res.data.AllProducts || []); // Assume response contains a field 'AllProducts'
@@ -107,7 +107,7 @@ const Docs = () => {
     setError(null); // Reset error state before fetching
     try {
       const res = await axios.get(
-        "http://localhost:4000/api/products?category=jewelery"
+        "https://progidyapi.onrender.com/api/products?category=jewelery"
       );
       if (res.status === 200) {
         console.log(res.data);
@@ -128,7 +128,7 @@ const Docs = () => {
     setloading(true); // Set loading state before making the request
     setError(null); // Reset error state before fetching
     try {
-      const res = await axios.get("http://localhost:4000/api/products?page=1");
+      const res = await axios.get("https://progidyapi.onrender.com/api/products?page=1");
       if (res.status === 200) {
         console.log(res.data);
         setAllProducts5(res.data.AllProducts || []); // Assume response contains a field 'AllProducts'
@@ -149,7 +149,7 @@ const Docs = () => {
     setError(null); // Reset error state before fetching
     try {
       const res = await axios.get(
-        "http://localhost:4000/api/products?select=id,title,description"
+        "https://progidyapi.onrender.com/api/products?select=id,title,description"
       );
       if (res.status === 200) {
         console.log(res.data);
@@ -240,7 +240,7 @@ const Docs = () => {
           <div className="bg-zinc-50 w-full mt-4 p-4 rounded-md">
             <pre className="overflow-x-auto">
               <code className="w-full block p-2 text-sm bg-gray-200 rounded-md whitespace-pre">
-                {`fetch('http://localhost:4000/api/products')
+                {`fetch('https://progidyapi.onrender.com/api/products')
   .then((res) => res.json())
   .then((json) => console.log(json));`}
               </code>
@@ -297,7 +297,7 @@ const Docs = () => {
           <div className="bg-zinc-50 w-full mt-4 p-4 rounded-md">
             <pre className="overflow-x-auto">
               <code className="w-full block p-2 text-sm bg-gray-200 rounded-md whitespace-pre">
-                {`fetch('http://localhost:4000/api/products/1')
+                {`fetch('https://progidyapi.onrender.com/api/products/1')
   .then((res) => res.json())
   .then((json) => console.log(json));`}
               </code>
@@ -351,7 +351,7 @@ const Docs = () => {
             <div className="bg-zinc-50 w-full mt-4 p-4 rounded-md">
               <pre className="overflow-x-auto">
                 <code className="w-full block p-2 text-sm bg-gray-200 rounded-md whitespace-pre">
-                  {`fetch('http://localhost:4000/api/products?limit=3')
+                  {`fetch('https://progidyapi.onrender.com/api/products?limit=3')
   .then((res) => res.json())
   .then((json) => console.log(json));`}
                 </code>
@@ -405,7 +405,7 @@ const Docs = () => {
             <div className="bg-zinc-50 w-full mt-4 p-4 rounded-md">
               <pre className="overflow-x-auto">
                 <code className="w-full block p-2 text-sm bg-gray-200 rounded-md whitespace-pre">
-                  {`fetch('http://localhost:4000/api/products?sort=id')
+                  {`fetch('https://progidyapi.onrender.com/api/products?sort=id')
   .then((res) => res.json())
   .then((json) => console.log(json));`}
                 </code>
@@ -459,7 +459,7 @@ const Docs = () => {
             <div className="bg-zinc-50 w-full mt-4 p-4 rounded-md">
               <pre className="overflow-x-auto">
                 <code className="w-full block p-2 text-sm bg-gray-200 rounded-md whitespace-pre">
-                  {`fetch('http://localhost:4000/api/products?category=jewelery')
+                  {`fetch('https://progidyapi.onrender.com/api/products?category=jewelery')
   .then((res) => res.json())
   .then((json) => console.log(json));`}
                 </code>
@@ -513,7 +513,7 @@ const Docs = () => {
             <div className="bg-zinc-50 w-full mt-4 p-4 rounded-md">
               <pre className="overflow-x-auto">
                 <code className="w-full block p-2 text-sm bg-gray-200 rounded-md whitespace-pre">
-                  {`fetch('http://localhost:4000/api/products?page=1)
+                  {`fetch('https://progidyapi.onrender.com/api/products?page=1)
   .then((res) => res.json())
   .then((json) => console.log(json));`}
                 </code>
@@ -567,7 +567,7 @@ const Docs = () => {
             <div className="bg-zinc-50 w-full mt-4 p-4 rounded-md">
               <pre className="overflow-x-auto">
                 <code className="w-full block p-2 text-sm bg-gray-200 rounded-md whitespace-pre">
-                  {`fetch('http://localhost:4000/api/products?select=id,title,description)
+                  {`fetch('https://progidyapi.onrender.com/api/products?select=id,title,description)
   .then((res) => res.json())
   .then((json) => console.log(json));`}
                 </code>
