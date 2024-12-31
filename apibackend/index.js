@@ -8,10 +8,11 @@ import cors from 'cors';
 import cookieparser from 'cookie-parser';
 
 
-// const corsOptions = {
-//     origin: 'http://localhost:5173', // specify your frontend URL
-//     methods: 'GET,POST',
-//     allowedHeaders: 'Content-Type,Authorization',
+ const corsOptions = {
+    origin: 'https://progidyapi.vercel.app/', // specify your frontend URL
+    methods: 'GET,POST',
+    allowedHeaders: 'Content-Type,Authorization',
+    credentials:true
 // };
 app.use(cors());
 app.use(express.json());
