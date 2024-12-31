@@ -14,7 +14,7 @@ import cookieparser from 'cookie-parser';
     allowedHeaders: 'Content-Type,Authorization',
     credentials:true
 // };
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieparser());
