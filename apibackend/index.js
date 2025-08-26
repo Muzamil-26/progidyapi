@@ -8,11 +8,11 @@ import cors from 'cors';
 import cookieparser from 'cookie-parser';
 
 
- //const corsOptions = {
-    //origin: 'https://progidyapi.vercel.app/', // specify your frontend URL
-   // credentials:true
-//};
-app.use(cors());
+ const corsOptions = {
+    origin: '*', // specify your frontend URL
+   credentials:true
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cookieparser());
